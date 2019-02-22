@@ -5,18 +5,27 @@
     <title>Kenny Hu's Website</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/animate.css/animate.min.css">
+
     <script src="js/node_modules/jquery/dist/jquery.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <!-- <script src="js/node_modules/popper.js/dist/popper.min.js"></script> -->
+    <script src="js/node_modules/popper.js/dist/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/node_modules/jquery/dist/jquery.js"></script>
     <style>
       body {
         font-size:20px;
       }
     </style>
+
+    <script>
+      $(document).ready(function(){ //prevent any jQuery code from running before the document is finished loading
+        $('#csstudent')
+      });
+    </script>
   </head>
 
-  <body style="background-color:#212121;">
+  <body style="background-color:#303030;">
     <nav class="navbar navbar-expand-md fixed-top bg-dark navbar-dark py-2">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar"> <!-- data-target -->
         <span class="navbar-toggler-icon"></span>
@@ -25,6 +34,9 @@
         <ul class="navbar-nav ml-auto"> <!-- ml-auto makes it right align -->
           <li class="nav-item">
             <a class="nav-link" href="#welcome">Welcome</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#aboutme">About</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#gallery">Gallery</a>
@@ -36,14 +48,18 @@
       </div>
     </nav>
 
-    <div class="container-fluid w-75">
-      <div id="welcome" class="media container-fluid bg-secondary clearfix mt-5">   <!-- container-fluid stretches the whole viewpoint versus just container -->
+    <div id="welcome" class="container-fluid w-75 mt-5">
+      <div class="container-fluid mx-auto mt-5 pt-5" style="color:white; height:100%;">
+        <h1 id="csstudent">Computer Science Student</h1>
+        <h1 id="gymmonkey" style="float:right;">Fitness Enthusiast</h1>
+      </div>
+
+      <div id="aboutme" class="media container-fluid bg-secondary clearfix">   <!-- container-fluid stretches the whole viewpoint versus just container -->
         <div class="media-body ml-5 my-5">
-          <h1>Welcome</h1>
           <p class="text-white">Hey there, my name is Kenny Hu. I am currently an undergraduate student studying Computer Science at Stony Brook University.</p>
           <br/>
           <p class="text-white">Languages I know include Java, JavaScript, HTML, CSS, and MIPS Assembly. To learn more about my qualifications, take a look at my resume.</p>
-          <a href="documents/resume.pdf" target="_blank"><button type="button" class="btn btn-success btn-lg">Click here for my resume</button></a>
+          <a href="documents/Kenny Hu's Resume.pdf" target="_blank"><button type="button" class="btn btn-success btn-lg">Click here for my resume</button></a>
         </div>
         <div class="media-right"><img class="img-fluid rounded-circle media-object ml-3 mr-5 my-5" src="images/main.jpg"></div>
       </div>
