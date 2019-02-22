@@ -16,17 +16,54 @@
       body {
         font-size:20px;
       }
+
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 4px;
+      }
+
+      /* Create 3 equal columns that sits next to each other */
+      .column {
+        flex: 25%;
+        max-width: 34%;
+        padding: 0 4px;
+      }
+
+      .column img {
+        margin-top: 8px;
+        vertical-align: middle;
+      }
+
+      /* Responsive layout - makes a two column-layout instead of 3 columns */
+      @media screen and (max-width: 800px) {
+        .column {
+          flex: 50%;
+          max-width: 50%;
+        }
+      }
+
+      /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+      @media screen and (max-width: 600px) {
+        .column {
+          flex: 100%;
+          max-width: 100%;
+        }
+      }
     </style>
 
     <script>
       $(document).ready(function(){ //prevent any jQuery code from running before the document is finished loading
-        $('#csstudent')
+        $('#csstudent').animate({
+
+        })
       });
     </script>
   </head>
 
   <body style="background-color:#303030;">
     <nav class="navbar navbar-expand-md fixed-top bg-dark navbar-dark py-2">
+      <a class="navbar-brand" href="#">This website is currently being worked on</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar"> <!-- data-target -->
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -64,8 +101,22 @@
         <div class="media-right"><img class="img-fluid rounded-circle media-object ml-3 mr-5 my-5" src="images/main.jpg"></div>
       </div>
 
-      <div id="gallery" class="container-fluid bg-dark" style="color:white;">
+      <div id="gallery" class="container-fluid" style="color:white; background-color:white;">
         <h1 style="text-align:center;" class="pt-3">Gallery</h1>
+        <div class="row">
+          <div class="column">
+            <img src="images/gym1.jpg">
+            <img src="images/gym2.jpg">
+            <img src="images/gym3.jpg">
+          </div>
+          <div class="column">
+            <img src="images/bbridge1.jpg">
+            <img src="images/bbridge2.jpg">
+            <img src="images/bbridge3.jpg">
+          </div>
+        </div>
+
+        <!--
         <div id="galleryCarousel" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
               <li data-target="#galleryCarousel" data-slide-to="0" class="active"></li>
@@ -112,7 +163,6 @@
             </div>
           </div>
 
-          <!-- left and right carousel controls -->
           <a class="carousel-control-prev" href="#galleryCarousel" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
@@ -122,6 +172,7 @@
             <span class="sr-only">Next</span>
           </a>
         </div>
+        -->
       </div>
 
       <div id="contactme" class="container-fluid bg-secondary">
