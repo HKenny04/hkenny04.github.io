@@ -6,60 +6,21 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="node_modules/animate.css/animate.min.css">
+    <link rel ="stylesheet" href="index.css">
 
     <script src="js/node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="js/node_modules/popper.js/dist/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 
     <script src="js/node_modules/jquery/dist/jquery.js"></script>
-    <style>
-      body {
-        font-size:20px;
-      }
-
-      .gallery {
-        -webkit-column-count:3;
-        -moz-column-count:3;
-        column-count:3;
-        -webkit-column-width:33%;
-        -moz-column-width:33%;
-        column-width:33%;
-      }
-
-      .gallery .pics {
-        -webkit-transition:all 350ms ease;
-        transition:all 350ms ease;
-      }
-
-      .gallery .animation {
-        -webkit-transform:scale(1);
-        -ms-transform:scale(1);
-        transform:scale(1);
-      }
-
-      @media (max-width: 450px) {
-        .gallery {
-        -webkit-column-count:1;
-        -moz-column-count:1;
-        column-count:1;
-        -webkit-column-width:100%;
-        -moz-column-width:100%;
-        column-width:100%;
-        }
-      }
-
-      @media (max-width: 400px) {
-        .btn.filter {
-        padding-left:1.1rem;
-        padding-right:1.1rem;
-        }
-      }
-    </style>
 
     <script>
       $(document).ready(function(){ //prevent any jQuery code from running before the document is finished loading
-        $('#iAm').css('visibility','visible').hide().fadeIn(4000);
-        $('#seawolf').css('visibility','visible').hide().fadeIn(3000);
+        $('#iAm').css('visibility','visible').hide().fadeIn(3000);
+        $('#seawolf').delay(3000).animate({opacity:1}, 2000);
+        $('#gymmonkey').delay(5000).animate({opacity:1}, 2000);
+        $('#but').delay(7000).animate({opacity:1}, 2000);
+        $('#sengineer').delay(9000).animate({opacity:1}, 3000);
       });
     </script>
   </head>
@@ -88,8 +49,10 @@
     <div class="container-fluid w-75 mt-5">
       <div class="container-fluid mx-auto mt-5 pt-5" style="color:white; height:100%;">
         <h1 id="iAm" style="font-size:100px; text-align:center;">I am a...</h1>
-        <span id="seawolf" style="font-size:50px;">Stony Brook Seawolf</span>
-        <span id="gymmonkey" style="float:right; font-size:50px;">Fitness Enthusiast</span>
+        <span id="seawolf" style="font-size:50px; opacity:0;">Stony Brook Seawolf</span>
+        <span id="gymmonkey" style="float:right; font-size:50px; opacity:0;">Fitness Enthusiast</span>
+        <div id="but" style="text-align:center; font-size:50px; opacity:0;">But Most Importantly</div>
+        <div style="text-align:center;"><span id="sengineer" style="font-size:50px; opacity:0;">I Am A Software Developer</span><div>
       </div>
 
       <div id="aboutme" class="media container-fluid bg-secondary clearfix">   <!-- container-fluid stretches the whole viewpoint versus just container -->
@@ -99,7 +62,7 @@
           <p class="text-white">Languages I know include Java, JavaScript, HTML, CSS, and MIPS Assembly. To learn more about my qualifications, take a look at my resume.</p>
           <a href="documents/Kenny Hu's Resume.pdf" target="_blank"><button type="button" class="btn btn-success btn-lg">Click here for my resume</button></a>
         </div>
-        <div class="media-right"><img class="img-fluid rounded-circle media-object ml-3 mr-5 my-5" src="images/sample.jpg"></div>
+        <div class="media-right"><img class="img-fluid media-object ml-3 mr-5 my-5" src="images/sample.jpg"></div>
       </div>
 
       <div id="galleryBoard" class="container-fluid pb-3" style="background-color:#424242;">
