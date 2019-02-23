@@ -17,37 +17,41 @@
         font-size:20px;
       }
 
-      .row {
-        display: flex;
-        flex-wrap: wrap;
-        padding: 0 4px;
+      .gallery {
+        -webkit-column-count:3;
+        -moz-column-count:3;
+        column-count:3;
+        -webkit-column-width:33%;
+        -moz-column-width:33%;
+        column-width:33%;
       }
 
-      /* Create 3 equal columns that sits next to each other */
-      .column {
-        flex: 25%;
-        max-width: 34%;
-        padding: 0 4px;
+      .gallery .pics {
+        -webkit-transition:all 350ms ease;
+        transition:all 350ms ease;
       }
 
-      .column img {
-        margin-top: 8px;
-        vertical-align: middle;
+      .gallery .animation {
+        -webkit-transform:scale(1);
+        -ms-transform:scale(1);
+        transform:scale(1);
       }
 
-      /* Responsive layout - makes a two column-layout instead of 3 columns */
-      @media screen and (max-width: 800px) {
-        .column {
-          flex: 50%;
-          max-width: 50%;
+      @media (max-width: 450px) {
+        .gallery {
+        -webkit-column-count:1;
+        -moz-column-count:1;
+        column-count:1;
+        -webkit-column-width:100%;
+        -moz-column-width:100%;
+        column-width:100%;
         }
       }
 
-      /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-      @media screen and (max-width: 1500px) {
-        .column {
-          flex: 100%;
-          max-width: 100%;
+      @media (max-width: 400px) {
+        .btn.filter {
+        padding-left:1.1rem;
+        padding-right:1.1rem;
         }
       }
     </style>
@@ -76,7 +80,7 @@
             <a class="nav-link" href="#aboutme">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#gallery">Gallery</a>
+            <a class="nav-link" href="#galleryBoard">Gallery</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#contactme">Contact Me</a>
@@ -101,22 +105,37 @@
         <div class="media-right"><img class="img-fluid rounded-circle media-object ml-3 mr-5 my-5" src="images/main.jpg"></div>
       </div>
 
-      <div id="gallery" class="container-fluid" style="background-color:white;">
-        <h1 style="text-align:center;" class="pt-3">Gallery</h1>
-        <div class="row">
-          <div class="column">
-            <img src="images/gym1.jpg">
-            <img src="images/gym2.jpg">
-            <img src="images/gym3.jpg">
+      <div id="galleryBoard" class="container-fluid pb-3" style="background-color:white;">
+        <h1 style="text-align:center;" class="py-3">Gallery</h1>
+        <div class="gallery" id="gallery">
+          <!-- Grid column -->
+          <div class="mb-3 pics animation all 2">
+            <img class="img-fluid" src="images/gym1.jpg">
           </div>
-          <div class="column">
-            <img src="images/bbridge1.jpg">
-            <img src="images/bbridge2.jpg">
-            <img src="images/bbridge3.jpg">
-            <img src="images/statue1.jpg">
-          </div>
-          <div class="column">
 
+          <!-- Grid column -->
+          <div class="mb-3 pics animation all 1">
+            <img class="img-fluid" src="images/gym2.jpg">
+          </div>
+
+          <!-- Grid column -->
+          <div class="mb-3 pics animation all 1">
+            <img class="img-fluid" src="images/gym3.jpg">
+          </div>
+
+          <!-- Grid column -->
+          <div class="mb-3 pics animation all 2">
+            <img class="img-fluid" src="images/bbridge1.jpg">
+          </div>
+
+          <!-- Grid column -->
+          <div class="mb-3 pics animation all 2">
+            <img class="img-fluid" src="images/bbridge2.jpg">
+          </div>
+
+          <!-- Grid column -->
+          <div class="mb-3 pics animation all 1">
+            <img class="img-fluid" src="images/bbridge3.jpg">
           </div>
         </div>
 
