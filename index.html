@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="node_modules/animate.css/animate.min.css">
-    <link rel ="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.css">
 
     <script src="js/node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="js/node_modules/popper.js/dist/popper.min.js"></script>
@@ -18,31 +18,34 @@
   </head>
 
   <body style="background-color:#303030;">
-    <nav class="navbar navbar-expand-md fixed-top bg-dark navbar-dark py-2">
+    <nav class="navbar navbar-expand-md sticky-top bg-dark navbar-dark py-2">
       <a class="navbar-brand" href="#">This website is currently being worked on</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar"> <!-- data-target -->
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="collapsibleNavbar"> <!-- data-target by id-->
         <ul class="navbar-nav ml-auto"> <!-- ml-auto makes it right align -->
-          <li class="nav-item scroll">
-            <a class="nav-link" href="#aboutme">About</a>
-          </li>
-          <li class="nav-item scroll">
-            <a class="nav-link" href="#skills">Skills</a>
+          <li class="nav-item">
+            <a class="nav-link scroll" href="#aboutme">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="gallery.html">Gallery</a>
+            <a class="nav-link scroll" href="#skills">Skills</a>
           </li>
-          <li class="nav-item scroll">
-            <a class="nav-link" href="#contactme">Contact Me</a>
+          <li class="nav-item">
+            <a class="nav-link scroll" href="#contactme">Contact Me</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Other Links</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="gallery.html">Gallery</a>
+            </div>
           </li>
         </ul>
       </div>
     </nav>
 
-    <div id="aboutme" class="container-fluid w-75 mt-5">
-      <div class="container-fluid mx-auto mt-5 mb-3 pt-5" style="color:white; height:100%;">
+    <div id="aboutme" class="container-fluid w-75">
+      <div class="container-fluid mx-auto mb-3 pt-5" style="color:white; height:100%;">
         <h1 style="text-align:center; font-size:5vw;">I am <br/>
           <span
             class="txt-rotate"
@@ -52,7 +55,7 @@
         </h1>
       </div>
 
-      <div class="media container-fluid bg-secondary clearfix">   <!-- container-fluid stretches the whole viewpoint versus just container -->
+      <div class="media container-fluid clearfix" style="background-color:#424242;">   <!-- container-fluid stretches the whole viewpoint versus just container -->
         <div class="media-body ml-5 my-auto px-5 text-white">
           <p>Hey there, my name is Kenny Hu. I'm an undergraduate student studying Computer Science at Stony Brook University.</p>
           <br/>
@@ -208,6 +211,10 @@
           <span class="mx-3">
             <img src="images/linkedinicon.png" class="img-fluid rounded-circle"/>
             <a style="color:white;" target="_blank" href="https://www.linkedin.com/in/kenny-hu-91b97116a/">LinkedIn</a>
+          </span>
+          <span class="mx-3">
+            <img src="images/githubicon.jpg" class="img-fluid rounded-circle"/>
+            <a style="color:white;">Github: HKenny04</a>
           </span>
         </div>
       </div>
