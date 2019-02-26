@@ -59,4 +59,13 @@ $(document).ready(function(){
     event.preventDefault();
     $("html, body").animate({scrollTop: $($(this).attr("href")).offset().top}, 500);
   });
+
+  $("#gymHover").hover(function(){
+    $("#gymInit").hide();
+    $("#gymAfter").show();
+    $("#gymHover").css('opacity', '0.5');
+  }, function(){
+    $("#gymAfter").hide();
+    $("#gymInit").show();
+  })
 });
