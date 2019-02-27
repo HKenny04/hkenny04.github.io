@@ -55,17 +55,30 @@ window.onload = function() {
 };
 
 $(document).ready(function(){
+  //smooth scrolling
   $(".scroll").click(function(event){
     event.preventDefault();
     $("html, body").animate({scrollTop: $($(this).attr("href")).offset().top}, 500);
   });
 
-  $("#gymHover").hover(function(){
-    $("#gymInit").hide();
-    $("#gymAfter").show();
-    $("#gymHover").css('opacity', '0.5');
-  }, function(){
-    $("#gymAfter").hide();
-    $("#gymInit").show();
-  })
+  /*
+  $('#gymHover').mouseleave(function(event) {
+    $("#gymAfter").css('visibility', 'hidden');
+    $("#gymInit").css('visibility','visible').hide().stop().fadeIn(800);
+		$('#gymHover').stop().animate({
+			opacity:1,
+		}, 600, function() {		//animation complete
+			$('#gymHover').addClass('hovered');
+		});
+    });
+	$('#gymHover').mouseover(function(event) {
+    $("#gymInit").css('visibility', 'hidden');
+    $("#gymAfter").css('visibility','visible').hide().stop().fadeIn(800);
+		$('#gymHover').stop().animate({
+		    opacity:0.8,
+		}, 300, function() {		//animation complete
+			$('#gymHover').removeClass('hovered');
+		});
+    });
+  */
 });

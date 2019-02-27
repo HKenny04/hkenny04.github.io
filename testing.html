@@ -9,64 +9,117 @@
     <script src="js/bootstrap.min.js"></script>
 
     <script src="js/node_modules/jquery/dist/jquery.js"></script>
-    <script>
-    $('.progress-bar').each(function() {
-
-    var valueNow = $(this).attr('aria-valuenow');
-
-    $(this).animate({
-
-      width: valueNow + '%',
-
-      percent: 100
-
-    }, {
-
-      progress: function(a, p, n) {
-
-        $(this)
-          .css('width', (valueNow * p + '%'))
-          .html(Math.round(valueNow * p) + '%');
-
+    <script></script>
+    <style>
+      /*
+      .container{
+      padding: 1em 0;
+      float: left;
+      width: 50%;
+      }
+      @media screen and (max-width: 640px){
+      .container{
+        display: block;
+        width: 100%;
+      }
       }
 
-    });
+      @media screen and (min-width: 900px){
+      .container{
+        width: 33.33333%;
+      }
+      }
 
-    });
-    </script>
-    <style>
-    .progress {
-      margin-top: 15px;
-    }
+      .container .title{
+      color: #1a1a1a;
+      text-align: center;
+      margin-bottom: 10px;
+      }
+      */
+
+      .content {
+      position: relative;
+      width: 90%;
+      max-width: 400px;
+      margin: auto;
+      overflow: hidden;
+      }
+
+      .content .content-overlay {
+      background: rgba(0,0,0,0.7);
+      position: absolute;
+      height: 99%;
+      width: 100%;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      opacity: 0;
+      -webkit-transition: all 0.4s ease-in-out 0s;
+      -moz-transition: all 0.4s ease-in-out 0s;
+      transition: all 0.4s ease-in-out 0s;
+      }
+
+      .content:hover .content-overlay{
+      opacity: 1;
+      }
+
+      .content-image{
+      width: 100%;
+      }
+
+      .content-details {
+      position: absolute;
+      text-align: center;
+      padding-left: 1em;
+      padding-right: 1em;
+      width: 100%;
+      top: 50%;
+      left: 50%;
+      opacity: 0;
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      -webkit-transition: all 0.3s ease-in-out 0s;
+      -moz-transition: all 0.3s ease-in-out 0s;
+      transition: all 0.3s ease-in-out 0s;
+      }
+
+      .content:hover .content-details{
+      top: 50%;
+      left: 50%;
+      opacity: 1;
+      }
+
+      .content-details h3{
+      color: #fff;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      margin-bottom: 0.5em;
+      text-transform: uppercase;
+      }
+
+      .content-details div{
+      color: #fff;
+      font-size: 0.8em;
+      }
+
+      .fadeIn-bottom{
+      top: 80%;
+      }
     </style>
   </head>
 
   <body>
     <div class="container">
-      <div class="col-md-6">
-
-        <h1 class="h3">Progress bars animated</h1>
-
-        <div class="progress">
-          <div class="progress-bar" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+      <div class="content">
+          <div class="content-overlay"></div>
+          <img class="content-image" src="images/dumbbell.png">
+          <div class="content-details fadeIn-bottom">
+            <h3 class="content-title">The Gym</h3>
+            <div>I workout 4 to 6 times a week, depending on how busy I am that week. I believe weight lifting trains me to be more self-disciplined. I have a certain set of rules that I created and follow, such as limiting how much sugar I consume a day and when and what to eat. Self-discipline is a big part of a healthy lifestyle. Lifting also helps me release stress when I feel pressured by school work. Working out is my form of physical and emotional therapy. If you're interested, you should check out <a style="color: yellow;" href="#">my workout routine</a> and hit me up.</div>
           </div>
-        </div>
-
-        <div class="progress">
-          <div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-          </div>
-        </div>
-
-        <div class="progress">
-          <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
-          </div>
-        </div>
-
-        <div class="progress">
-          <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-          </div>
-        </div>
-
+        </a>
       </div>
     </div>
   </body>
