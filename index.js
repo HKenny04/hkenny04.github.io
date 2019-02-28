@@ -61,24 +61,13 @@ $(document).ready(function(){
     $("html, body").animate({scrollTop: $($(this).attr("href")).offset().top}, 500);
   });
 
-  /*
-  $('#gymHover').mouseleave(function(event) {
-    $("#gymAfter").css('visibility', 'hidden');
-    $("#gymInit").css('visibility','visible').hide().stop().fadeIn(800);
-		$('#gymHover').stop().animate({
-			opacity:1,
-		}, 600, function() {		//animation complete
-			$('#gymHover').addClass('hovered');
-		});
-    });
-	$('#gymHover').mouseover(function(event) {
-    $("#gymInit").css('visibility', 'hidden');
-    $("#gymAfter").css('visibility','visible').hide().stop().fadeIn(800);
-		$('#gymHover').stop().animate({
-		    opacity:0.8,
-		}, 300, function() {		//animation complete
-			$('#gymHover').removeClass('hovered');
-		});
-    });
-  */
+  
+  $('.progress-bar').each(function() {
+    var valueNow = $(this).attr('aria-valuenow');
+
+    $(this).animate({
+      width: valueNow + '%',
+      percent: 100
+    }, 1500);
+  });
 });
