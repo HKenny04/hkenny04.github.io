@@ -61,7 +61,7 @@ $(document).ready(function(){
     $("html, body").animate({scrollTop: $($(this).attr("href")).offset().top}, 500);
   });
 
-  
+
   $('.progress-bar').each(function() {
     var valueNow = $(this).attr('aria-valuenow');
 
