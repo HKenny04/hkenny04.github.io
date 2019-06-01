@@ -56,12 +56,13 @@ window.onload = function() {
 
 $(document).ready(function(){
   //smooth scrolling
-  $(".scroll").click(function(event){
+  $('.scroll').click(function(event){
     event.preventDefault();
-    $("html, body").animate({scrollTop: $($(this).attr("href")).offset().top}, 500);
+    $('html, body').animate({scrollTop: $($(this).attr("href")).offset().top}, 500);
   });
 
   //progress bar animation
+  /*
   $('.animate-bar').each(function() {
     var valueNow = $(this).attr('aria-valuenow');
 
@@ -70,4 +71,15 @@ $(document).ready(function(){
       percent: 100
     }, 1500);
   });
+  */
+ $('#skills').waypoint(function() {
+  $('.animate-bar').each(function() {
+    var valueNow = $(this).attr('aria-valuenow');
+
+    $(this).animate({
+      width: valueNow + '%',
+      percent: 100
+    }, 1500);
+  });
+  }, { offset: '50%' });    //starts animating when half of the skills section is in the frame
 });
