@@ -3,7 +3,7 @@
 }
 
 .nav {
-    background-color: var(--off-white);
+    background-color: #ECECEC;
     position: sticky;
     top: 0px;
     width: 100%;
@@ -37,6 +37,34 @@
     border-bottom: 1px solid #333;
 }
 
-#about, #skills {
-    min-height: 75vh;
+#about {
+    display: table;
+    height: 90vh;
+}
+
+.split {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.left {
+    width: 55%;
+    background-color: #F3D250;
+}
+
+.right {
+    width: 45%;
+    background-color: #F78888;
+}
+
+.intro {
+    font-size: 200%;
+    width: 80%;
+    text-align: left;
+    margin-left: 10%;
+}
+
+img {
+    border-radius: 50%;
 }

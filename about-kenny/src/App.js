@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Navbar from './components/Navbar.js';
 import About from './components/About.js';
-import Profile from './components/Profile.js';
 import Skills from './components/Skills.js';
 
 class App extends Component {
@@ -10,7 +9,6 @@ class App extends Component {
       <div className="App">
         <Navbar />
         <About id="about" />
-        <Profile id="profile" />
         <Skills id="skills" />
       </div>
     );
