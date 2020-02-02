@@ -42,7 +42,7 @@
     height: 90vh;
 }
 
-.split {
+.left, .right {
     display: table-cell;
     vertical-align: middle;
     text-align: center;
@@ -59,7 +59,7 @@
 }
 
 .intro {
-    font-size: 200%;
+    font-size: 180%;
     width: 80%;
     text-align: left;
     margin-left: 10%;
@@ -67,4 +67,42 @@
 
 img {
     border-radius: 50%;
+}
+
+#skills {
+    padding: 30px 0 30px 0;
+    text-align: center;
+    color: #D1E8E2;
+    background-color: #2C3531;
+    overflow: hidden;
+}
+
+.header {
+    padding: 10px;
+}
+
+.skills_header {
+    font-size: 250%;
+    font-weight: bold;
+}
+
+.header_progress {
+    height: 160%;
+    font-size: 100%;
+    width: 95%;
+    border-radius: 20px;
+}
+
+.progress_bar {
+    width: 95%;
+    border-radius: 20px;
+    height: 70%;
+}
+
+.header {
+    font-size: 180%;
+}
+
+.col-md-3 {
+    font-size: 150%;
 }

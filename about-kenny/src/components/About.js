@@ -5,13 +5,14 @@ class About extends Component {
   render() {
     return (
         <div id="about">
-          <div className="split left">
+          <div className="left">
             <div className="intro">
-              Hey there, my name is Kenny Hu. I'm an undergraduate student studying Computer Science and Applied Mathematics at Stony Brook University.<br/>
-              During my free time I like to workout, watch TV, look at memes, play games, and do some coding.
+              Hey there, my name is Kenny Hu. I'm an undergraduate student studying Computer Science and Applied Mathematics at Stony Brook University.<br/><br/>
+              My main interests include software development, artificial intelligence, and cybersecurity.<br/><br/>
+              During my free time I like to workout, hang out with friends, play games, and code.
             </div>
           </div>
-          <div className="split right">
+          <div className="right">
             <img alt={"profile"} src={profile} /><br/><br/>
             <h2>Kenny Hu</h2>
             <h4>Junior at Stony Brook University</h4>
