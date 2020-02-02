@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ProgressBar from 'react-bootstrap/ProgressBar';
-import Table from 'react-bootstrap/Table';
+import Button from 'react-bootstrap/Button';
+import Resume from '../documents/kenny_hu_resume.pdf';
 
 class Skills extends Component {
   render() {
@@ -102,7 +103,7 @@ class Skills extends Component {
         </div>
 
         <br/>
-        <div><button type="button">Resume</button></div>
+        <div><a href={Resume} target="_blank"><Button variant="outline-success">Resume</Button></a></div>
       </div>
     );
   };
