@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Navbar from './components/Navbar';
 import About from './components/About';
 import Skills from './components/Skills';
-import Contacts from './components/Contacts';
 
 class App extends Component {
   render() {
@@ -11,7 +10,6 @@ class App extends Component {
         <Navbar />
         <About id="about" />
         <Skills id="skills" />
-        <Contacts id="contacts" />
       </div>
     );
   }

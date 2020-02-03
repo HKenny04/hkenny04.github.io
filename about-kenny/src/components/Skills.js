@@ -24,7 +24,7 @@ class Skills extends Component {
         <div className="row">
           <div className="col-md-3">Java</div>
           <div className="col-md-9">
-            <ProgressBar className="progress_bar" variant="success" now={80} key={5} />
+            <ProgressBar className="progress_bar" variant="success" now={85} key={5} />
           </div>
         </div>
 
@@ -59,7 +59,7 @@ class Skills extends Component {
         <div className="row">
           <div className="col-md-3">MIPS Assembly</div>
           <div className="col-md-9">
-            <ProgressBar className="progress_bar" variant="warning" now={45} key={10} />
+            <ProgressBar className="progress_bar" variant="warning" now={49} key={10} />
           </div>
         </div>
 
@@ -87,7 +87,7 @@ class Skills extends Component {
         </div>
 
         <br/>
-        <div className="header">World Languages</div>
+        <div className="header">Languages</div>
         <div className="row">
           <div className="col-md-3">Cantonese</div>
           <div className="col-md-9">
@@ -103,7 +103,11 @@ class Skills extends Component {
         </div>
 
         <br/>
-        <div><a href={Resume} target="_blank"><Button variant="outline-success">Resume</Button></a></div>
+        <div>
+          <a href={Resume} target="_blank" rel="noopener noreferrer">
+            <Button variant="outline-success">My Resume</Button>
+          </a>
+        </div>
       </div>
     );
   };
